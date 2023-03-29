@@ -1,0 +1,12 @@
+.*
+/assets
+/wordpress
+/vendor/
+node_modules
+package.json
+package-lock.json
+composer.json
+composer.lock
+gruntfile.js
+readme.md
+phpcs.xml.dist

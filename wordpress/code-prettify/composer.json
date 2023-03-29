@@ -1,0 +1,35 @@
+{
+  "name": "kasparsd/code-prettify",
+  "description": "Automatic code syntax highlighter",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Kaspars Dambis",
+      "homepage": "https://kaspars.net"
+    }
+  ],
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+    "phpcompatibility/php-compatibility": "^9.3",
+    "wp-coding-standards/wpcs": "^2.3"
+  },
+  "config": {
+    "sort-packages": true,
+    "platform": {
+      "php": "5.6.20"
+    },
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "scripts": {
+    "lint": [
+      "composer validate --no-check-publish --strict",
+      "phpcs ."
+    ],
+    "lint-fix": [
+      "phpcbf ."
+    ]
+  }
+}
